@@ -1,0 +1,1 @@
+I have no idea what I'm doint, I'm just praying that whatever super simple commands I can cram in the docker and make files will please just execute the RMD, which should have everything of actual susbtance in it. PLEASE WORK :((((((((((((((((((((((

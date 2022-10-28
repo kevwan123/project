@@ -1,0 +1,65 @@
+---
+title: "BIOS611Project"
+author: "Kevin Wang"
+date: "2022-10-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+#library(reticulate)
+library(tidyr)
+#library(matlab)
+library(MASS)
+library(stats)
+# library(nlme)
+library(tibble)
+library(dplyr)
+library(data.table)
+# library(assist)
+# library(mgcv)
+library(ggplot2)
+# library(lme4)
+#library(kernlab)
+#library(plotly)
+# library(numDeriv)
+# library(randtoolbox)
+# library(mrgsolve)
+# library(parallel)
+# library(BSDA)
+# library(epitools)
+#library(rdist)
+#library(gbm)
+```
+
+# Getting data
+
+
+```{r secure the (data)}
+data = read.csv("brain_stroke.csv")
+summary(data)
+```
+
+# Exploratory Data analysis
+
+
+```{r exploratory}
+print("hello wolrd")
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
