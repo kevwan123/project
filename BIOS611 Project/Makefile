@@ -1,7 +1,10 @@
 PHONY: clean
 
 clean:
-	rm derived_data/*
-	rm logs/*
-	rm figures/*
+        rm outputs/*
+
+PHONY: plswork
+
+plswork:
+        Rscript project.R
 
