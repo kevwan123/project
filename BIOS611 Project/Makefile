@@ -5,9 +5,9 @@ clean:
 	rm models/*
 	rm textlogs/*
 
-PHONY: plswork
+PHONY: report
 
-plswork:
+report:
 	Rscript project.R
 
 PHONY: EDA
