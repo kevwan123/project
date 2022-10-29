@@ -1,16 +1,18 @@
 PHONY: clean
 
 clean:
-        rm outputs/*
+	rm outputs/*
+	rm models/*
+	rm textlogs/*
 
 PHONY: plswork
 
 plswork:
-        Rscript project.R
+	Rscript project.R
 
 PHONY: EDA
 EDA: brain_stroke.csv
-        Rscript EDA.R
+	Rscript EDA.R
 PHONY: EDAvisual
 EDAvisual: brain_stroke.csv
-        Rscript EDAvisual.R
+	Rscript EDAvisual.R
