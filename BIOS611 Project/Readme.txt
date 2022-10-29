@@ -6,8 +6,12 @@ EDA.R: R file containing model based exploratory data analysis
 EDAvisual.R: R file containing visualization based exploratory data analysis. 
 Makefile: simple make file that hopefully doesn't break
 outputs: folder containing all execution outputs. Emptied into trash upon "make clean"
+models: any models to be exported/imported will be stored here
+textlogs: if any text needs to be logged, it will be put here
 project.R: meat of the project, currently empty
 Readme.txt: this file
+
+The makefile has three targets: the exploratory data analysis, the plots based exploratory data analysis, and the main project file. They are are still works in progress.
 
 
 
@@ -38,4 +42,4 @@ The third objective is to make a model purely for predictive accuracy. Something
 
 
 
-I have no idea what I'm doint, I'm just praying that whatever super simple commands I can cram in the docker and make files will please just execute the RMD, which should have everything of actual susbtance in it. PLEASE WORK :((((((((((((((((((((((
+I have no idea what I'm doing with the Docker file, I think I need to get a mac so the software can work properly. For some reason, I cannot get anything to work on my computer.
