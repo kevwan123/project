@@ -1,12 +1,20 @@
 File directory-
-
+bios611project.rmd: rmarkdown version of project
+brain_stroke.csv: data in a comma separated value file
+Dockerfile: Dockerfile, currently not in use while I figure out how to get dockers to work with windows
+EDA.R: R file containing model based exploratory data analysis
+EDAvisual.R: R file containing visualization based exploratory data analysis. 
+Makefile: simple make file that hopefully doesn't break
+outputs: folder containing all execution outputs. Emptied into trash upon "make clean"
+project.R: meat of the project, currently empty
+Readme.txt: this file
 
 
 
 
 https://www.kaggle.com/datasets/jillanisofttech/brain-stroke-dataset?resource=download
 
-As from the website, the variables are. Our main goal will be to correlate stroke with the other variables to asses them as risk factors.
+As copied from the website, the variables are. Our main goal will be to correlate stroke with the other variables to asses them as risk factors.
 
 1) gender: "Male", "Female" or "Other"
 2) age: age of the patient
@@ -18,7 +26,7 @@ As from the website, the variables are. Our main goal will be to correlate strok
 10) smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*
 11) stroke: 1 if the patient had a stroke or 0 if not
 
-As of now, there are two actual analyses: a model based exploratory data analysis and a visualization based exploratory data analysis. 
+As of now, there are two actual r files: a model based exploratory data analysis and a visualization based exploratory data analysis. 
 
 In the model based exploratory data analysis, we fit a bunch of models to get a little feel for what may or may not be going on. This will inform our visualizations, where we will use scatters, smooths, and clusters to investigate patterns in the data.
 
