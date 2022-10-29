@@ -1,3 +1,18 @@
+To use this repo, use the commands:
+
+git clone https://github.com/kevwan123/project.git
+cd project
+cd BIOS611\ Project/
+mkdir models
+mkdir outputs
+mkdir textlogs
+make EDA
+make EDAvisual
+make report
+make clean
+
+
+
 File directory-
 bios611project.rmd: rmarkdown version of project
 brain_stroke.csv: data in a comma separated value file
