@@ -6,11 +6,15 @@ cd BIOS611\ Project/
 mkdir models
 mkdir outputs
 mkdir textlogs
+
+docker run -e PASSWORD="password" -v "$(pwd):/project" --name mycontainer2 -p -it 8787:8787 project
+docker cp project mycontainer2:/home/rstudio/project
+
+Then log into the rstudio in the localhost:8787 and in the terminal type
 make EDA
 make EDAvisual
 make report
 make clean
-
 
 
 File directory-
