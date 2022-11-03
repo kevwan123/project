@@ -12,6 +12,7 @@ cd ..
 docker cp BIOS611\ Project/ mycontainer2:/home/rstudio/project
 
 Then log into the rstudio in the localhost:8787 and in the terminal type
+cd project
 make EDA
 make EDAvisual
 make report
