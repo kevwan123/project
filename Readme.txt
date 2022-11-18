@@ -2,7 +2,6 @@ To use this repo, use the commands:
 
 git clone https://github.com/kevwan123/project.git
 cd project
-cd BIOS611\ Project/
 mkdir models
 mkdir outputs
 mkdir textlogs
