@@ -7,7 +7,8 @@ mkdir models
 mkdir outputs
 mkdir textlogs
 
-docker run -e PASSWORD="password" -v "$(pwd):/project" --name mycontainer2 -p -it 8787:8787 project
+docker build . -t bios611
+docker run -e PASSWORD="password" -v "$(pwd):/project" --name mycontainer2 -p -it 8787:8787 bios611
 cd ..
 docker cp BIOS611\ Project/ mycontainer2:/home/rstudio/project
 
