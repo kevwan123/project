@@ -1,18 +1,25 @@
-PHONY: clean
+.PHONY: clean
 
 clean:
-	rm outputs/*
-	rm models/*
-	rm textlogs/*
+	rm -rf outputs
+	rm -rf models
+	rm -rf textlogs
+	rm -f report.html
+	mkdir outputs
+	mkdir models
+	mkdir textlogs
+	
 
-PHONY: report
 
-report:
-	Rscript project.R
+report.html: outputs/variancebycomponents.tiff report.Rmd
+	R -e "rmarkdown::render('report.Rmd', output_format='html_document')"
 
-PHONY: EDA
-EDA: brain_stroke.csv
-	Rscript EDA.R
-PHONY: EDAvisual
-EDAvisual: brain_stroke.csv
+outputs/variancebycomponents.tiff : brain_stroke.csv EDAvisual.R
+	mkdir -p outputs
 	Rscript EDAvisual.R
+
+#EDA: brain_stroke.csv
+#	Rscript EDA.R
+
+#EDAvisual: brain_stroke.csv
+#	Rscript EDAvisual.R

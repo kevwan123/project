@@ -25,7 +25,7 @@ numerics = c("age","hypertension", "heart_disease", "avg_glucose_level", "bmi","
 cor(data[,numerics]) %>% round(digits = 2)
 
 # Exploring some Naive models to get a bit of a feel for the data
-fit1 = glm(stroke ~ .-stroke, family = binomial, data = data)
+fit1 = glm(stroke ~ ., family = binomial, data = data)
 summary(fit1)
 
 fitcategoricalonly = glm(stroke ~ 
