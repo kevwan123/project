@@ -20,16 +20,16 @@ make clean
 
 
 File directory-
-bios611project.rmd: rmarkdown version of project
+Report.rmd - the actual final report
+bios611project.rmd: rmarkdown version of project, contains extraneous analysis that don't necessarily add to the report
 brain_stroke.csv: data in a comma separated value file
-Dockerfile: Dockerfile, currently not in use while I figure out how to get dockers to work with windows
-EDA.R: R file containing model based exploratory data analysis
-EDAvisual.R: R file containing visualization based exploratory data analysis. 
-Makefile: simple make file that hopefully doesn't break
+Dockerfile: Dockerfile
+EDA.R: R file containing model based exploratory data analysis that aren't important enough to make the final report
+EDAvisual.R: R file containing visualization based exploratory data analysis and other plots to go into the final report 
+Makefile: Makefile
 outputs: folder containing all execution outputs. Emptied into trash upon "make clean"
 models: any models to be exported/imported will be stored here
 textlogs: if any text needs to be logged, it will be put here
-project.R: meat of the project, currently empty
 Readme.txt: this file
 
 The makefile has three targets: the exploratory data analysis, the plots based exploratory data analysis, and the main project file. They are are still works in progress.
