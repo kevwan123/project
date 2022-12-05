@@ -11,7 +11,7 @@ clean:
 	
 
 
-report.html: outputs/variancebycomponents.tiff report.Rmd
+report.html: outputs report.Rmd EDAvisual.R EDA.R brain_stroke.csv
 	R -e "rmarkdown::render('report.Rmd', output_format='html_document')"
 
 outputs/variancebycomponents.tiff : brain_stroke.csv EDAvisual.R

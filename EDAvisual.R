@@ -9,7 +9,6 @@ library(dplyr)
 library(mgcv)
 library(ggplot2)
 
-
 data = read.csv("brain_stroke.csv")
 #summary(data)
 
@@ -50,7 +49,27 @@ tiff("outputs/variancebycomponents.tiff")
 plot(pca$sdev)
 dev.off()
 
+tiff("outputs/glmage.tiff")
+plot(stroke~age)
+fitage = glm(stroke ~ age, family = binomial, data = data)
+lines(sort(fitted.values(fitage))~sort(age), type = "l", col = "red")
+dev.off()
 
+plot(stroke~age)
+
+fitage = glm(stroke ~ age, family = binomial, data = data)
+smm = summary(fitage)
+smm$coefficients
+lines(sort(fitted.values(fitage))~sort(age), type = "l", col = "red")
+
+tiff("outputs/glmage.tiff")
+plot(stroke~age)
+
+fitage = glm(stroke ~ age, family = binomial, data = data)
+smm = summary(fitage)
+smm$coefficients
+lines(sort(fitted.values(fitage))~sort(age), type = "l", col = "red")
+dev.off()
 #library("Rtsne")
 #tiff("outputs/tsne.tiff")
 #out = Rtsne(numdata,pca=TRUE)
