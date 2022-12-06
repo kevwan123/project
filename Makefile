@@ -4,9 +4,9 @@ clean:
 	rm -rf outputs
 	rm -rf derived_data
 	rm -f report.html
+	rm -f report.pdf
+	rm -f report.html
 	mkdir outputs
-	mkdir models
-	mkdir textlogs
 	
 
 
