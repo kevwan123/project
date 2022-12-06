@@ -10,10 +10,12 @@ cd ..
 docker cp project mycontainer2:/home/rstudio/project
 
 Then log into the rstudio in the localhost:8787 and in the terminal type
+
 cd project
-make EDA
+sudo chown -R rstudio:rstudio .
+#Type in the password
 make EDAvisual
-make report
+make report.html
 make clean
 
 
@@ -26,8 +28,6 @@ EDA.R: R file containing model based exploratory data analysis that aren't impor
 EDAvisual.R: R file containing visualization based exploratory data analysis and other plots to go into the final report 
 Makefile: Makefile
 outputs: folder containing all execution outputs. Emptied into trash upon "make clean"
-models: any models to be exported/imported will be stored here
-textlogs: if any text needs to be logged, it will be put here
 Readme.txt: this file
 
 The makefile has three targets: the exploratory data analysis, the plots based exploratory data analysis, and the main project file. They are are still works in progress.
@@ -57,8 +57,4 @@ To come in the future is the actual real data analysis, where we will do things 
 
 The second objective of this project will be to investigate other possible things of interest in the data. Notably, we'd like to see if there are relationships between any of the other variables. We'd like to do a little bit of graphical modelling to see if there are such relationships (and also to learn more about graphical models because I'd like to get into that field). Some questions that we could be asking are: does gender affect hypertension or heart disease? Does heart disease depend on BMI or smoking status? Is there a sampling bias dependent on any particular variable? Would a joint probabilistic model work better for capturing interactions?
 
-The third objective is to make a model purely for predictive accuracy. Something like a generalized adaboost or some kernel trickery. 
-
-
-
-I have no idea what I'm doing with the Docker file, I think I need to get a mac so the software can work properly. For some reason, I cannot get anything to work on my computer.
+The third objective is to make a model purely for predictive accuracy.
