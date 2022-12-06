@@ -10,7 +10,26 @@ library(mgcv)
 
 print("Loading the data and printing a simple summary")
 data = read.csv("brain_stroke.csv")
+fixeddata = data %>% mutate(
+  smoking_status = as.factor(smoking_status),
+  gender = as.factor(gender),
+  hypertension = as.factor(hypertension),
+  heart_disease = as.factor(heart_disease),
+  ever_married= as.factor(ever_married),
+  work_type= as.factor(work_type),
+  Residence_type= as.factor(Residence_type)
+)
+
+fixeddata = data
+
+write.csv(fixeddata, "derived_data/fixeddata.csv")
+
 summary(data)
+is.na(data) %>% sum()
+
+reduceddata = data %>% select("age","bmi","smoking_status","gender","hypertension","heart_disease","avg_glucose_level")
+write.csv(reduceddata, file = "derived_data/reduced.csv")
+
 
 #plot(data)
 print("a tiny bit of cleaning and rechecking")
@@ -31,7 +50,7 @@ summary(fit1)
 fitcategoricalonly = glm(stroke ~ 
                            gender + hypertension + heart_disease + 
                            ever_married + work_type + 
-                           Residence_type + bmi + smoking_status + stroke
+                           Residence_type + bmi + smoking_status
                            , family = binomial, data = data)
 summary(fitcategoricalonly)
 
@@ -58,4 +77,6 @@ fit_interactions = gam(stroke ~
 
 
 summary(fit_interactions)
+
+
 
