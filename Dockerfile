@@ -15,3 +15,5 @@ RUN R -e "install.packages(\"glmnet\")"
 RUN R -e "install.packages(\"gbm\")"
 RUN R -e "install.packages(\"ggplot2\")"
 RUN R -e "install.packages(\"plotly\")"
+RUN apt-get install -y sudo
+RUN sudo usermod -aG sudo rstudio

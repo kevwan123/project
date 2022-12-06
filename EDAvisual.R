@@ -9,10 +9,10 @@ library(dplyr)
 library(mgcv)
 library(ggplot2)
 
-setwd("C:/Users/kevwa/Desktop/BIOS611/project")
 data = read.csv("brain_stroke.csv")
+attach(data)
 #summary(data)
-
+numdata = data %>% dplyr::select(age, avg_glucose_level, bmi)
 #plot(data)
 data$smoking_status = as.factor(data$smoking_status)
 data$work_type = as.factor(data$work_type)
@@ -44,11 +44,10 @@ dev.off()
 
 # numdata = data[,numerics]
 # pca = prcomp(numdata)
-# plot(pca$sdev)
 
-jpeg("outputs/variancebycomponents.jpeg")
-plot(pca$sdev)
-dev.off()
+# jpeg("outputs/variancebycomponents.jpeg")
+# plot(pca$sdev)
+# dev.off()
 
 jpeg("outputs/glmage.jpeg")
 plot(stroke~age, xlab = "age", ylab = "probability of stroke")
@@ -122,7 +121,6 @@ barplot(prev~c("none",
 dev.off()
 
 pca = prcomp(numdata)
-#plot(pca$sdev)
 
 
 jpeg("outputs/pca12.jpeg")
@@ -137,8 +135,8 @@ dev.off()
 
 
 
-reduced = read.csv("outputs/reduced.csv")
-
+#reduced = read.csv("outputs/reduced.csv")
+reduced = data %>% dplyr::select("age","bmi","smoking_status","gender","hypertension","heart_disease","avg_glucose_level")
 library("Rtsne")
 jpeg("outputs/tsne_numericalonly.jpeg")
 out = Rtsne(numdata,pca=TRUE)
