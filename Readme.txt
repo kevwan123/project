@@ -2,9 +2,7 @@ To use this repo, use the commands:
 
 git clone https://github.com/kevwan123/project.git
 cd project
-mkdir models
 mkdir outputs
-mkdir textlogs
 
 docker build . -t bios611
 docker run -e PASSWORD="password" -v "$(pwd):/project" --name mycontainer2 -p -it 8787:8787 bios611
