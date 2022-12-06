@@ -30,7 +30,6 @@ Makefile: Makefile
 outputs: folder containing all execution outputs. Emptied into trash upon "make clean"
 Readme.txt: this file
 
-The makefile has three targets: the exploratory data analysis, the plots based exploratory data analysis, and the main project file. They are are still works in progress.
 
 
 
@@ -49,12 +48,8 @@ As copied from the website, the variables are. Our main goal will be to correlat
 10) smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*
 11) stroke: 1 if the patient had a stroke or 0 if not
 
-As of now, there are two actual r files: a model based exploratory data analysis and a visualization based exploratory data analysis. 
+The first objective is to investigate how stroke depends on the covariates.
 
-In the model based exploratory data analysis, we fit a bunch of models to get a little feel for what may or may not be going on. This will inform our visualizations, where we will use scatters, smooths, and clusters to investigate patterns in the data.
-
-To come in the future is the actual real data analysis, where we will do things rigorously to try to draw some actual conclusions.
-
-The second objective of this project will be to investigate other possible things of interest in the data. Notably, we'd like to see if there are relationships between any of the other variables. We'd like to do a little bit of graphical modelling to see if there are such relationships (and also to learn more about graphical models because I'd like to get into that field). Some questions that we could be asking are: does gender affect hypertension or heart disease? Does heart disease depend on BMI or smoking status? Is there a sampling bias dependent on any particular variable? Would a joint probabilistic model work better for capturing interactions?
+The second objective of this project will be to investigate other possible things of interest in the data. Notably, we'd like to see if there are relationships between any of the other variables.
 
 The third objective is to make a model purely for predictive accuracy.
